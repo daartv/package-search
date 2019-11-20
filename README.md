@@ -18,4 +18,13 @@ http://localhost:3000/packages
 Which will return ALL the packages
 http://localhost:3000/packages/search
 Which needs a `query` property on the body of the request and will query the database for a package with a name that includes the query. 
+
+## FAQ
+Why Mongo? - I wanted to quickly use a database to have the capability of having a more flexible search on the package name than just an exact match, Mongo also provides for a utility to select certain fields of the document which helped filtering unwanted ones.
+
+Why a Schema? - It's important to document what's in the database! 
+
+Why a controller, model and route file? - I like to keep files small and modular, the separation of concerns helps with clarity and makes working with several monitors/columns easier!
+
+Why make the packages a JSON file and import to Mongo? - The file was close to a JSON file and I was able to quickly convert it just using find and replaces with VScode, I wanted to solve that using code but in the end I found much quicker to just do it with VSCode which provides great tools for this kind of problem, I wanted to start coding as fast as possible and for me, doing this just took about 10 minutes.
 ```
